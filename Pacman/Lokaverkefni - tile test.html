@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>Lokaverkefni - tile test</title>
+        <link rel="stylesheet" href="lokaverkefni.css">
+    </head>
+    <body>
+        <div class="content">
+    	   <canvas id="myCanvas" width="504" height="456" style="border: 1px  solid black;">
+    	   Sorry, but your browser does not support the HTML5 canvas tag.
+    	   </canvas>
+            <div class="gameOver" id="gameOver">GAME OVER<p><span onclick="entityManager.restart()">Restart</span></p></div>
+
+            <div class="gameOver" id="nextLevel">NEXT LEVEL<p><span onclick="main.startNextLevel()">Start</span></p></div>
+
+            <div class="gameOver" id="gameStart">PACMAN<p><span onclick="main.startNextLevel()">Start</span></p></div>
+
+            <div class="gameOver" id="gameWon">WINNING!!!<p><span onclick="entityManager.restart()">Play Again</span></p></div>
+
+    
+            <div class="info">
+                <h1>Pacman</h1>
+                <p>Instructions:</p>
+                <p>Press A to turn left</p>
+                <p>Press W to turn up</p>
+                <p>Press D to turn right</p>
+                <p>Press S to turn down</p>
+                <p>Press M to Mute</p>
+                <p>Press P to Pause</p>
+            </div>
+            <div class="score">
+                <div id="output"></div>
+                <div id="lives"></div>
+            </div>
+        </div>
+
+        <script src="globals.js"></script>
+        <script src="util.js"></script>
+        <script src="keys.js"></script>
+        <script src="Tile.js"></script>
+        <script src="Timer.js"></script>
+        <script src="levels.js"></script>
+        <script src="Gameboard.js"></script>
+        <script src="Sprite.js"></script>  
+        <script src="points.js"></script>
+        <script src="Pac.js"></script>
+        <script src="Ghost.js"></script>
+        <script src="entityManager.js"></script>
+        <script src="update.js"></script>
+        <script src="render.js"></script>
+        <script src="imagesPreload.js"></script>
+        <script src="main.js"></script>
+        <script src="PACMAN.js"></script>
+    </body>
+</html>
